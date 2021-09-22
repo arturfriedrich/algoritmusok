@@ -1,0 +1,14 @@
+Írjuk ki [A, B] intervallumon a C-vel osztható számokat!
+
+intervallum kezdete     A       egész       I
+intervallum vége        B       egész       I
+ciklusváltozó           I       egész       M
+osztó                   O       egész       I
+
+Be: A, B, C
+
+for I <- A, B
+  if I % C = 0
+    Ki: I
+
+HF: Hogyan lehet eldönteni egy számról, hogy prímszám-e

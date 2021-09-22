@@ -1,0 +1,7 @@
+1-től 10-ig írjuk ki a páros egész számokat!
+
+ciklusváltozó		I		valós		M,O
+
+for I <- 1, 10
+  if I MOD 2 = 0
+    Ki: I

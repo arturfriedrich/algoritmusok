@@ -1,0 +1,24 @@
+Határozzuk meg két megadott számből, hogy melyik a nagyobb!
+
+egyik szám		SZ1		valós		I,O
+másik szám		SZ2		valós		I,O
+
+
+Be: SZ1, SZ2
+
+if SZ1 > SZ2
+  Ki: SZ1
+else if SZ1 < SZ2
+  Ki: SZ2
+else
+  Ki: “Egyenlő”
+
+HF: 3 input szám esetén írja ki a legkisebb értékét!
+HF: 2 síkbeli egyenes metszéspontjának meghatározása!
+HF: Adott egy céltábla, amin egységnyi távolságra vannak a körök egymástól. Rálövünk a céltáblára, mennyit ér a lövés?
+[0, 1]: 10 pont
+[1, 2]: 9 pont
+[2, 3]: 8 pont
+…..
+[9, 10]: 1 pont
+[10, …]: 0 pont

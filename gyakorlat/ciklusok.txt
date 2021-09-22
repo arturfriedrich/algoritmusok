@@ -1,0 +1,20 @@
+Írjuk ki 1-től 10-ig a pozitiv egész számokat 3 különböző ciklussal!
+
+ciklusváltozó		I	valós		M,O
+
+
+Főprogram:
+
+for I <- 1, 10
+  Ki: I
+
+I <- 1
+while I <= 10
+  Ki: I
+  I <- I+1
+
+I <- 1
+repeat
+  Ki: I
+  I <- I+1
+until I <= 10
