@@ -1,0 +1,18 @@
+két pozitív egész szám legkisebb közös többszöröse!
+
+egyik szám                  A       egész       I
+másik szám                  B       egész       I
+a nagyobbik szám            C       egész       M
+aktuálisan vizsgált szám    I       egész       M,O
+
+Be: A, B
+C <- A
+if B > C
+  C <- B
+I <- C
+while NOT((I MOD A = 0) AND (I MOD B = 0))
+  I <- I + 1
+Ki: I
+
+
+HF: két pozitív egész szám relatív prím-e

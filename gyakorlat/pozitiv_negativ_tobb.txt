@@ -1,0 +1,32 @@
+Adott N darab input adat, mondjuk meg, hogy a megadott számok közül pozitívból vagy
+negatívból volt-e több, illetve azt, hogy mennyivel.
+
+adatok darabszáma           N       egész       I
+aktuális input adat         A       valós       I
+pozitívak darabszáma        PDB     egész       M
+negatívak darabszáma        NDB     egész       M
+ciklusváltozó               I       egész       M
+eredmény                    ER      egész       O
+
+Be: N
+PDB <- NBD <- 0
+for I <- 1, N
+  Be: A
+  if A > 0
+    PDB <- PDB + 1
+  else if A < 0
+    NDB <- NBD + 1
+
+if PDB > NDB
+  Ki: "Pozitívakból van", PDB - NDB, "-al több."
+else if PDB < NDB
+  Ki: "Negatívakból van", NDB - PDB, "-al több."
+else
+  Ki: "Ugyan annyi van belőlük."
+
+
+HF: Egy darab gyűjtőváltozóval megoldani a problémát.
+HF: hányféleképpen tudom kitölteni az ötös lottó szelvényt
+HF: adott a és b zárt intervallumba eső
+            - prímek kiirása
+            - relatív prímpárok kiírása
