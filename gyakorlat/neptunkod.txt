@@ -1,0 +1,25 @@
+Generáljunk egy véletlenszerű neptunkódót (6 db angol nagybetű)
+
+generált neptun kód            NE       sztring         M,O
+ciklusváltozó                  I        egész           M
+
+
+NE <- ""
+for I <- 1, 6
+  NE <- NE + CHR(RANDOM(ASC('Z') - ASC('A') + 1 + ASC('A')
+
+Ki: NE
+
+Generáljunk egy véletlenszerű neptunkódót (angol nagybetűk és számok)
+
+lehetseges karakterek         LK        sztring         M
+
+LK <- ""
+for I <- 0, 9
+  LK <- LK + STR(I)
+for I <- 65, 90
+  LK <- LK + CHR(I)
+
+NE <- ""
+for I <- 1, 6
+  NE <- RANDOM(LENGTH(LK)) + 1

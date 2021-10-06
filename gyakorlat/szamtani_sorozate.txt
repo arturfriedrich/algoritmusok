@@ -1,0 +1,56 @@
+Döntsül el egy N elemű számsorozatról, hogy az számtani sorozat-e!
+Az adatokat nem kell eltárolni, bekérés közben döntsük el.
+
+aktális szám            AKT         valós       I
+előző szám              EL          valós       I,M
+differencia             D           valós       M
+ciklusváltozó           I           egész       M
+eredmény                SZ          logikai     M,O
+adatok száma            N           egész       I
+
+/* kezdőtevékenységek */
+Be: N
+Be: EL, AKT
+SZ <- igaz
+D <- AKT - EL
+I <- 2
+
+/* adatfeldolgozás */
+while SZ AND (I <= N)
+  EL <- AKT
+  Be: AKT
+  if D <> AKT - EL
+    SZ <- hamis
+  I <- I + 1
+
+/* eredmény */
+if SZ
+  Ki: "Szémtani sorozat
+else
+  Ki: "Nem szémtani sorozat"
+
+
+Ugyanaz a feladat, csak eltároljuk az adatokat.
+
+számokat tartalmazó tömb        T       egy dimenziós valós típusokból álló tömb [100]      I
+adatok száma                    N       egész                                               I
+ciklusváltozó                   I       egész                                               M
+eredmény                        SZ      logikai                                             M,O
+differencia                     D       valós                                               M
+
+Be: N
+for I <- 1, N
+  Be: T[I]
+SZ <- igaz
+D <- T[2]-T[1]
+
+I <- 2
+while (I <= N) AND SZ
+  if T[I + 1] - T[I] <> D
+    SZ <- hamis
+  I <- I + 1
+
+if SZ
+  Ki: "Szémtani sorozat
+else
+  Ki: "Nem szémtani sorozat"
