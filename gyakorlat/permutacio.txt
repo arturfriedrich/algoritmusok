@@ -1,0 +1,9 @@
+Fordítsunk meg egy nevet!
+A név felépítése: Vezetéknév Keresztnév
+TFH: név helyes formátumban
+Vezetéknév Keresztnév => Keresztnév Vezetéknév
+
+<>[]
+
+
+

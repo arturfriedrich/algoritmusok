@@ -1,0 +1,55 @@
+Mondjunk meg egy input sztringrõl, hogy az helyes nevet tartalmaz-e! 
+Vezetéknév Keresztnév
+- legalább 5 karakter hosszú
+- pontosan 1 db szóköz van benne
+- szóköz nem állhat az elején vagy a végén
+- csak angol betük lehetnek benne (szóközön kívül)
+  - a vezetéknév és a keresztnév elsõ betûi legyenek nagyok
+  - a többi betû legyen kicsi
+
+
+Funkció                         Azonosító     Típus                           Jelleg  
+______________________________________________________________________________________
+vizsgált név                    NEV           Sztring                         I       
+szóközök száma                  SZDB          Egész                           M       
+ciklusváltozó                   I             Egész                           M       
+név hossza                      NH            Egész                           M       
+eredmény                        ER            Logikai                         M,O     
+                                                                                      
+
+Be: NEV
+SZDB <- 0
+
+NH <- LENGTH(NEV)
+if NH >= 5
+  ER <- igaz
+else
+  ER <- hamis
+
+if ER
+  for I <- 1, NH
+    if NEV[I] = ' '
+      SZDB <- SZDB + 1
+  if SZDB <> 1
+    ER <- hamis
+
+if ER
+  if (NEV[1] = ' ') OR (NEV[NH] = ' ')
+    ER <- hamis
+
+I <- 1
+while ER AND (I <= NH)
+  if (I = 1) OR (I = POS(' ', NEV) + 1)
+    if NOT (NEV[I] IN ['A'..'Z'])
+      ER <- hamis
+  else if NOT (NEV[I] IN ['a'..'z', ' '])
+    ER <- hamis
+  I <- I + 1
+
+if ER
+  Ki: "A név megfelelõ"
+else
+  Ki: "A név nem megfelelõ"
+
+
+

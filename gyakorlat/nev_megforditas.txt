@@ -1,0 +1,14 @@
+Fordítsunk meg egy nevet!
+A név felépítése: Vezetéknév Keresztnév
+TFH: név helyes formátumban
+Vezetéknév Keresztnév => Keresztnév Vezetéknév
+
+Funkció                         Azonosító     Típus                           Jelleg  
+______________________________________________________________________________________
+eredeti név                     NEV           Sztring                         I       
+fordított név                   FNEV          Sztring                         O       
+                                                                                      
+
+Be: NEV
+FNEV <- COPY(NEV, POS(' ', NEV) + 1, (LENGTH(NEV)) + ' ' + COPY(NEV, 1, POS(' ', NEV) + 1)
+Ki: FNEV
