@@ -1,0 +1,32 @@
+/* Generáljuk le az 1, 2, 3, ... elemek véletlenszerű permutációját! */
+
+generált számok              T      egydimenziós egész tömb [100]              M,O
+segédhalmaz                  H      egészhalmaz                                M
+aktuális szám                AKT    egész                                      M
+ciklusváltozó                I      egész                                      M
+sorozat hossza               N      egész                                      I
+
+
+GENERAL(N,T)
+
+for I<-1, N
+  repeat
+    AKT<-RANDOM(N+1)
+  until NOT (AKT IN H)
+  H<-H+[AKT]
+  T[I]<-AKT
+
+
+
+generált számok             T       egydimenziós egész tömb [100]              M,O
+számsor hossza              H       egész                                      I
+ciklusváltozó               I       egész                                      M
+
+
+Be: H
+GENERAL(H,T)
+Ki: "számok:"
+for I<-1, H
+  Ki: T[I]
+
+HF: átalakítani nagy N-re

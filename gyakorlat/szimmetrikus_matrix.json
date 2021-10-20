@@ -1,0 +1,71 @@
+{
+    "recordTypes": [],
+    "variables": [
+        {
+            "description": "mátrix mérete",
+            "name": "N",
+            "type": "int",
+            "arrayLength": 0,
+            "arraySecondDimensionLength": 0,
+            "isArray": false,
+            "isTwoDimensionalArray": false,
+            "natureInput": true,
+            "natureOutput": false,
+            "natureWork": false,
+            "isRecord": false
+        },
+        {
+            "description": "ciklusváltozó (sorok)",
+            "name": "I",
+            "type": "int",
+            "arrayLength": 0,
+            "arraySecondDimensionLength": 0,
+            "isArray": false,
+            "isTwoDimensionalArray": false,
+            "natureInput": false,
+            "natureOutput": false,
+            "natureWork": true,
+            "isRecord": false
+        },
+        {
+            "description": "ciklusváltozó",
+            "name": "J",
+            "type": "int",
+            "arrayLength": 0,
+            "arraySecondDimensionLength": 0,
+            "isArray": false,
+            "isTwoDimensionalArray": false,
+            "natureInput": false,
+            "natureOutput": false,
+            "natureWork": true,
+            "isRecord": false
+        },
+        {
+            "description": "eredmény, szimmetrikus-e",
+            "name": "ER",
+            "type": "bool",
+            "arrayLength": 0,
+            "arraySecondDimensionLength": 0,
+            "isArray": false,
+            "isTwoDimensionalArray": false,
+            "natureInput": false,
+            "natureOutput": true,
+            "natureWork": true,
+            "isRecord": false
+        },
+        {
+            "description": "vizsgált mátrix",
+            "name": "MTX",
+            "type": "int",
+            "arrayLength": 20,
+            "arraySecondDimensionLength": 20,
+            "isArray": true,
+            "isTwoDimensionalArray": true,
+            "natureInput": true,
+            "natureOutput": false,
+            "natureWork": true,
+            "isRecord": false
+        }
+    ],
+    "sourceCode": "/*\nDöntsük el egy N*N-es négyzetes MTX-ről, hogy szimmetrikus-e egy függvény segítségével!\nN <= 20\n\nMTX[I,J]=MTX[I,J]\n\nfor I<-1, N\n  for J<-I+2, N\n\nmindent 2x\n\nfor I<-1, N-1\n  for J<-I+1, N\n*/\n\nSZIMM_E(MTX, N)\n\nER <- igaz\nwhile ER AND (I<=N-1)\n  J<-I+1\n  while (J<=N) AND ER\n    if MTX[I,J]<>MTX[J,I]\n      ER<-hamis\n    J<-J+1\n  I<-I+1\nreturn ER"
+}
