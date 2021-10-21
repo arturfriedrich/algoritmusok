@@ -1,0 +1,71 @@
+{
+    "recordTypes": [],
+    "variables": [
+        {
+            "description": "a rendezendő elemek",
+            "name": "A",
+            "type": "int",
+            "arrayLength": 100,
+            "arraySecondDimensionLength": 0,
+            "isArray": true,
+            "isTwoDimensionalArray": false,
+            "natureInput": true,
+            "natureOutput": true,
+            "natureWork": true,
+            "isRecord": false
+        },
+        {
+            "description": "az elemek száma",
+            "name": "N",
+            "type": "int",
+            "arrayLength": 0,
+            "arraySecondDimensionLength": 0,
+            "isArray": false,
+            "isTwoDimensionalArray": false,
+            "natureInput": true,
+            "natureOutput": false,
+            "natureWork": false,
+            "isRecord": false
+        },
+        {
+            "description": "csereváltozó",
+            "name": "CS",
+            "type": "int",
+            "arrayLength": 0,
+            "arraySecondDimensionLength": 0,
+            "isArray": false,
+            "isTwoDimensionalArray": false,
+            "natureInput": false,
+            "natureOutput": false,
+            "natureWork": true,
+            "isRecord": false
+        },
+        {
+            "description": "a helyére kerülő elem",
+            "name": "I",
+            "type": "int",
+            "arrayLength": 0,
+            "arraySecondDimensionLength": 0,
+            "isArray": false,
+            "isTwoDimensionalArray": false,
+            "natureInput": false,
+            "natureOutput": false,
+            "natureWork": true,
+            "isRecord": false
+        },
+        {
+            "description": "a cserélhetőciklus változója",
+            "name": "J",
+            "type": "int",
+            "arrayLength": 0,
+            "arraySecondDimensionLength": 0,
+            "isArray": false,
+            "isTwoDimensionalArray": false,
+            "natureInput": false,
+            "natureOutput": false,
+            "natureWork": true,
+            "isRecord": false
+        }
+    ],
+    "sourceCode": "Be: N\nfor I<-1, N\n  Be: A[I]\n\nfor I<-1, N-1\n  for J<-N, I+1, -1\n    if A[J] < A[J-1]\n      CS<-A[J]\n      A[J]<-A[J-1]\n      A[J-1]<-CS\n\nfor I<-1, N\n  Ki: A[I]\n      "
+}
