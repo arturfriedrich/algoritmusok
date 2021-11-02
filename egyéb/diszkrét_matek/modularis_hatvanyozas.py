@@ -1,5 +1,6 @@
 from math import *
 
+# adatbekérés
 alap = int(input("Adja meg az alapot: "))
 alap_hatvany = int(input("Adja meg az alap hatványát: "))
 alap_oszto = int(input("Adja meg az osztót: "))
